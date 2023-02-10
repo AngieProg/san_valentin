@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dorado-claro: #cba958;
+    --dorado-obscuro: #ab7a39;
+    --rojo-quemado: #aa2023;
+    --rojo-claro: #c72527;
+    --letra-cursiva: #5c4a23;
+    --boton: #d8b87f;
+    --letra-negra: #3b291e;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Bad Script', cursive;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Dancing Script', cursive;
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: var(--dorado-obscuro);
+    font-size: 3.7rem;
+}
+h2 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: var(--dorado-obscuro);
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: var(--dorado-obscuro);
+    font-size: 2rem;
+}
+
+p {
+    font-family: 'Bad Script', cursive;
+    color: var(--letra-negra);
+}
+
+/*---------------------------- HEADER------------------ */
+header {
+    width: 100%;
+    min-width: 320px;
+    height: 100vh;
+    background-image: url(./assets/img/fondos/portada.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.link-music img{
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    cursor:pointer;
+}
+
+/* ------------------------------------------------- */
+
+
+/* SECCION CONTADOR  */
+.contador-container {
+    background-image: url(./assets/img/fondos/contador.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width: 100%;
+    min-width: 320px;
+    height: 100vh;
+    text-align: center;
+}
+.contador-container h2{
+    padding-bottom: 2rem;
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+}
+.countdown {
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    align-self: center;
+}
+.countdown div{
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    width: 80px;
+}
+.countdown p {
+    display: grid;
+    place-items: center;
+    border: solid 1px var(--dorado-obscuro);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: var(--dorado-obscuro);
+    font-size: 2rem;
+    font-weight: bold;
+    background: var(--rojo-quemado); /* fallback for old browsers */
+}
+.countdown span {
+    display: block;
+    padding: 5px;
+    text-align: center;
+    color: var(--dorado-obscuro);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.contador-container img{
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+.contador-container h3{
+    font-size: 2.5rem;
+}
+/* -------------------------------------------------------------- */
+
+/* -----------------------NUESTRA HISTORIA------------------------ */
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 100px auto;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+    background-image: url(./assets/img/fondos/portada.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container::after {
+	content: "";
+	width: 2px;
+	height: 100%;
+	background: #1b3231;
+	position: absolute;
+	top: 0;
+	left: calc(50% - 1px);
+	z-index: 1;
+}
+
+.evento {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 200px;
+	position: relative;
+}
+
+.evento::after {
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	border-radius: 100px;
+	background: #DCDFD9;
+	border: 2px solid #1b3231;
+	position: absolute;
+	z-index: 2;
+	top: calc(50% - 9px);
+	left: calc(50% - 9px);
+}
+
+.fecha {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	width: calc(42% + 20px);
+	font-size: 32px;
+	font-weight: normal;
+}
+
+.foto {
+	width: 42%;
+	border: 10px solid #fff;
+	position: relative;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.foto::after {
+	content: "";
+	display: block;
+	border: 20px solid transparent;
+	border-left: 20px solid #fff;
+	position: absolute;
+	right: -50px;
+	top: calc(50% - 20px);
+}
+
+.foto img {
+	width: 100%;
+	vertical-align: top;
+}
+
+.evento:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.evento:nth-child(even) .fecha {
+	justify-content: end;
+}
+
+.evento:nth-child(even) .foto::after {
+	content: "";
+	border: 20px solid transparent;
+	border-right: 20px solid #fff;
+	right: initial;
+	left: -50px;
+}
+/* -----------------------------------NUESTRA HISTORIA------------------------------------------- */
+/* SECCION FRASE------------------------------------------- */
+
+
+/* SECCION REGALOS */
+.frase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 100vh;
+    background-image: url(./assets/img/fondos/frase_animada.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.frase  p {
+    font-size: 2rem;
+    margin: 2rem;
+    margin-bottom: 2rem;
+}
+/* -------------------------------------- */
+
+/*-------------------------MOMENTOS MAGICOS------------------------*/
+.momentos_mágicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 100vh;
+    background-image: url(./assets/img/fondos/galeria.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+
+/* CARTA DE AMOR---------------------------------------- */
+.carta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 100vh;
+    background-image: url(./assets/img/fondos/carta.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.carta  p {
+    font-size: 2rem;
+    margin: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* TE_AMO---------------------------------------- */
+.te_amo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 100vh;
+    background-image: url(./assets/img/fondos/portada.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+
+
+
+/* CONFIRMAR ASISTENCIA */
+
+.confirmacion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.confirmacion-container h2 {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.confirmacion-container  h3 {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.3rem;
+}
+
+.confirmacion-container  p{
+    margin-bottom: 2rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}
+
+.confirmacion-container button {
+    background: var(--letra-cursiva);
+    border-color: #cda588;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    padding: 5px;
+    color: #cda588;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* SECCION GRACIAS */
+.gracias {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gracias h2{
+    padding: 3rem;
+}
+.gracias img {
+    width: 250px;
+    height: 250px;
+    padding-top: 2rem;
+}
+/* ------------------------------------------------ */
+
+.title-alert {
+    font-size: 2.5rem !important;
+    margin: 10px !important;
+    color: #ab7a39 !important;
+}
+.text-alert {
+    font-size: 2rem;
+    color: #ab7a39;
+}
+ .button-alert {
+    background: var(--rojo-quemado);
+    border-color: var(--dorado-obscuro);  
+    border-radius: 5px;
+    font-size: 1.8rem;
+    padding: 5px;
+    color: var(--dorado-obscuro);
+    font-family: 'Dancing Script', cursive;
+    font-weight: 3rem;
+ }
+.input-alert{
+    background-color: black !important;
+    font-size: 2rem !important;
+    color: #ab7a39 !important;
+    /* color: white; */
+} 
